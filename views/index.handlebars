@@ -8,7 +8,9 @@
         <p class="description">{{this.description}}</p>
         <a class="article-link" href="https://www.cbc.ca{{this.link}}">Go to This Article</a>
 
-        <a class="article-notes" data-article={{this.id}}>See all Notes for this Article</a>
+        <a class="article-notes" href="#"data-article={{this.id}}>See all Notes for this Article</a>
+        
+        <a class="create-note" data-id={{this.id}}>Add your Own Comment</a>
 
           <img src={{this.image}} class="article-img" />
       </div>

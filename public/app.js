@@ -13,12 +13,11 @@ $(".close-button").on("click", function() {
 $(".close-button2").on("click", function() {
   toggleModalNotes();
   $(".notes-container").empty();
-  $(".notes-container").text("No Notes Available.");
 })
 
   
-  // Whenever someone clicks a title tag
-  $(document).on("click", ".title", function() {
+  // Whenever someone clicks the create note button
+  $(document).on("click", ".create-note", function() {
     // Empty the notes from the note section
     $("#notes").empty();
     // Save the id from the p tag
@@ -53,7 +52,7 @@ $(".close-button2").on("click", function() {
 
 
   $(document).on("click", ".article-notes", function() {
-
+    event.preventDefault()
     var thisId = $(this).attr("data-article");
   
     // Now make an ajax call for the Article
@@ -98,7 +97,7 @@ $(".close-button2").on("click", function() {
   $(document).on("click", "#savenote", function() {
     // Grab the id associated with the article from the submit button
     var thisId = $(this).attr("data-id");
-  
+    toggleModal();
     // Run a POST request to change the note, using what's entered in the inputs
     $.ajax({
       method: "POST",
@@ -126,7 +125,7 @@ $(".close-button2").on("click", function() {
   $(document).on("click", ".note-btn-delete", function() {
     // Grab the id associated with the article from the submit button
     var thisId = $(this).attr("data-btn-id");
-  
+    toggleModalNotes();
     // Run a POST request to change the note, using what's entered in the inputs
     $.ajax({
       method: "POST",
@@ -136,6 +135,7 @@ $(".close-button2").on("click", function() {
       .then(function(data) {
         // Log the response
         console.log(data);
+
         // Empty the notes section
       });
   

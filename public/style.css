@@ -91,7 +91,6 @@ input {
     
 }
 
-
 .article-img {
     max-width: 100%;
     display: block;
@@ -116,8 +115,56 @@ input {
 
 .article-link {
     font-family: var(--body-font);
-    font-size: 1rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--dark-red);
+    color: var(--off-white);
+    border: 0px solid white;
+    margin-top: 1rem;
     margin-left: 2rem;
+}
+
+.article-notes {
+    font-family: var(--body-font);
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--medium-purple);
+    color: var(--off-white);
+    border: 0px solid white;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.noteTitle {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+}
+
+.noteBody {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    color: var(--medium-purple);
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.create-note {
+    font-family: var(--body-font);
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--bright-red);
+    color: var(--off-white);
+    border: 0px solid white;
+    margin-top: 1rem;
+    margin-left: 2rem;
+
 }
 
 #notes {
