@@ -1,2 +1,2 @@
 # Reddit-scraper
-A web scraper for reddit built using Cheerio, Axios, Mongoose and Express.
+A web scraper for the local CBC news built using Cheerio, Axios, Mongoose and Express.
