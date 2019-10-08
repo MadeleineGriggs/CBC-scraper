@@ -1,0 +1,35 @@
+    <div id="wrapper">
+      <h1>Note Scraper</h1>
+      <h2>Local News, courtesy of the CBC</h2>
+      <div id="articles">
+      {{#each articles}}
+      <div class="article-display">
+        <p class="title" data-id={{this.id}}>{{this.title}}</p>
+        <p class="description">{{this.description}}</p>
+        <a class="article-link" href="https://www.cbc.ca{{this.link}}">Go to This Article</a>
+
+        <a class="article-notes" data-article={{this.id}}>See all Notes for this Article</a>
+
+          <img src={{this.image}} class="article-img" />
+      </div>
+      {{/each}}
+    </div>
+
+      <div class="modal">
+        <div class="modal-content">
+        <span class="close-button">&times;</span>
+          <div id="notes"></div>
+          </div>
+      </div>
+
+
+    <div class="modal2">
+      <div class="modal-content2">
+        <span class="close-button2">&times;</span>
+        <div class="notes-container">
+        </div>
+      </div>
+    </div>
+
+
+    </div>
